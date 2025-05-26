@@ -1,33 +1,29 @@
-import React from 'react'
+import { Activity, Bone, icons, User } from "lucide-react"
 
 const HealthData = [
     {
-        name: 'Heart',
-        status: 'Healthy Heart',
-        color: '#10B981',
-        date: 'Oct 15, 2021',
-        position: {top: '2rem', left: '50%' }
-    },
-    {
         name: 'Lungs',
-        status: 'Need Attention',
-        color: '#EF4444',
-        date: 'Oct 12, 2021',
-        position: {top: '4rem', left: '50%' }
+        status: 'Issue detected',
+        color: 'bg-red-500',
+        date: '2 Oct 2021',
+        level:60,
+        icon: Activity
     },
     {
         name: 'Teeth',
-        status: 'Good',
-        color: '#F59E0B',
-        date: 'Oct 10, 2021',
-        position: {top: '1.5rem', left: 'calc(50%-2rem)' }
+        status: 'Good condition',
+        color: 'bg-green-500',
+        date: '5 Oct 2021',
+        level:85,
+        icon: User
     },
     {
         name: 'Bone',
-        status: 'Strong',
+        status: 'Normal',
         color: '#10B981',
-        date: 'Oct 18, 2021',
-        position: {top: '8rem', left: '50%' }
+        date: '10 Oct 2021',
+        color: 'bg-orange-500',
+        icon:Bone
     }
 ]
 

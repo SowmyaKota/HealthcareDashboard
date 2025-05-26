@@ -4,17 +4,28 @@ import HealthData from '../../Data/HealthData'
 const HealthStatusCards = () => {
   return (
     <div className='health-status-cards'>
-        {HealthData.slice(1).map((item, index)=>(
-            <div key={index} className='healthcard'>
-                <div className='card-header'>
-                    <h3 className='card-title'>{item.name}</h3>
-                    <div className='status-dot'
-                    style={{backgroundColor: item.color}}>
-                    </div></div>
-                        <p className='card-status'>{item.status}</p>
-                        <p className='card-date'>{item.date}</p>
-                    </div> 
-        ))}
+        {HealthData.map((item)=>{
+            const Icon=item.icon
+            return(
+                <div key={item.id} className='health-card'>
+                    <div className='health-card-hearder'>
+                        <Icon size={24} style={{color: item.color}}/>
+                        <h4>{item.title}</h4> 
+                        </div>
+                        <p className='health-date'>{item.date}</p>
+                        <div className='progress-bar'>
+                            <div className='progress-fill'
+                            style={{
+                                backgroundColor:item.color,
+                                width: item.status === 'good' ? '80%' : '60%'
+                            }}>
+
+                            </div>
+                        </div>
+                    </div>
+            )
+        })}
+            
     </div>
   )
 }

@@ -1,51 +1,53 @@
-import { Calendar } from 'lucide-react'
+import { Dumbbell, Smile } from 'lucide-react'
 import React from 'react'
-import { AppointmentsData, CalendarAppointments } from '../../Data/AppointmentsData'
+import { calendarData } from '../../Data/ScheduleData'
 
 const CalendarView = () => {
-    const daysOfWeek= ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
-    const calendarDays=Array.from({length:31}, (_, i)=>i+1)
   return (
-    <div className='calendar-view'>
+    <div className='calendar-section'>
         <div className='calendar-header'>
-            <h2 className='calendar-title'>October 2021</h2>
-            <button className='calendar-btn'>
-                <Calendar className='calendar-icon'/>
-            </button>
+            <h3>{calendarData.month}</h3>
+            <div className='calendar-nav'>
+            <button>&lt;</button>
+            <button>&gt;</button>
+        </div>
         </div>
 {/* calendar grid */}
         <div className='calendar-grid'>
-            {daysOfWeek.map(day=>(
-                <div key={day} className='calendar-day-header'>
-                    {day}
+            {calendarData.days && calendarData.days.map((day)=>(
+                <div key={day.date} className='calendar-day'>
+                    <div className='day-header'>
+                        <span className='day-name'>{day.day}</span>
+                        <span className='day-date'>{day.date}</span>
                     </div>
-            ))}
-            {calendarDays.map(day=>(
-                <div key={day}
-                className={`calendar-day ${day===25? 'selected' : ''}`}>
-                    {day}
-                    </div>
+                    <div className='day-appointments'>
+                        {day.appointments && day.appointments.map((time, index)=>(
+                            <div key={index} className='appointment-time'>
+                                {time}
+                                </div>
+                        ))}
+                        </div>
+                        </div>
             ))}
         </div>
         {/* appointment times */}
-        <div className='appointment-times'>
-            {CalendarAppointments[25]?.map(time=>(
-                <span key={time} className='time-badge'>
-                    {time}
-                    </span>
-            ))}
+        <div className='calendar-appointments'>
+            <div className='appointment-card dentist'>
+                <Smile size={20}/>
+                <div>
+                    <h4>Dentist</h4>
+                    <p>09:00-11:00</p>
+                    <small>Dr. Cameron Williamson</small>
+                </div>
             </div>
-            {/* appointments cards */}
-            <div className='appointment-cards'>
-            {AppointmentsData.map((apt, index)=>(
-                <div key={index} className='appointment-card'>
-                    <div className='appointment-info'>
-                        <h4 className='appointment-title'>{apt.type}</h4>
-                        <p className='appointment-date'>{apt.date}</p>
-                    </div>
-                    <span className='appointment-time'>{apt.time}</span>
-                    </div>
-            ))}
+            <div className='appointment-card physiotherapy'>
+                <Dumbbell size={20}/>
+                <div>
+                    <h4>Physiotherapy Appointment</h4>
+                    <p>11:00-12:00</p>
+                    <small>Dr. Kevin Djones</small>
+                </div>
+            </div>
         </div>   
     </div>
   )

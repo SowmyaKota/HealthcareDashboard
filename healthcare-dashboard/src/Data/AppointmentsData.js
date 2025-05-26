@@ -1,7 +1,7 @@
 import { type } from 'jquery'
 import React from 'react'
 
-export const AppointmentsData = [
+export const appointments = [
     {
         type: 'Dentist',
         time: "09:00",
@@ -18,6 +18,6 @@ export const AppointmentsData = [
     }
 ]
 
-export const CalendarAppointments={
+export const calendarAppointments={
     25: ['09:00', "12:00", "14:00", "16:00"]
 }
