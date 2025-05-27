@@ -14,21 +14,90 @@ const CalendarView = () => {
         </div>
 {/* calendar grid */}
         <div className='calendar-grid'>
-            {calendarData.days && calendarData.days.map((day)=>(
-                <div key={day.date} className='calendar-day'>
+                <div className='calendar-day'>
                     <div className='day-header'>
-                        <span className='day-name'>{day.day}</span>
-                        <span className='day-date'>{day.date}</span>
+                        <span className='day-name'>Mon</span>
+                        <span className='day-date'>25</span>
                     </div>
                     <div className='day-appointments'>
-                        {day.appointments && day.appointments.map((time, index)=>(
-                            <div key={index} className='appointment-time'>
-                                {time}
-                                </div>
-                        ))}
+                        <div className='appointment-time'>10:00</div>
+                        <div className='appointment-time'>11:00</div>
+                        <div className='appointment-time'>12:00</div>
                         </div>
                         </div>
-            ))}
+
+                         <div className='calendar-day'>
+                    <div className='day-header'>
+                        <span className='day-name'>Tues</span>
+                        <span className='day-date'>26</span>
+                    </div>
+                    <div className='day-appointments'>
+                        <div className='appointment-time'>08:00</div>
+                        <div className='appointment-time blue-bg'>09:00</div>
+                        <div className='appointment-time'>10:00</div>
+                        </div>
+                        </div>
+
+                         <div className='calendar-day'>
+                    <div className='day-header'>
+                        <span className='day-name'>Wed</span>
+                        <span className='day-date'>27</span>
+                    </div>
+                    <div className='day-appointments'>
+                        <div className='appointment-time'>12:00</div>
+                        <div className='appointment-time'>-----</div>
+                        <div className='appointment-time'>13:00</div>
+                        </div>
+                        </div>
+
+                         <div className='calendar-day'>
+                    <div className='day-header'>
+                        <span className='day-name'>Thurs</span>
+                        <span className='day-date'>28</span>
+                    </div>
+                    <div className='day-appointments'>
+                        <div className='appointment-time'>10:00</div>
+                        <div className='appointment-time grey-bg'>11:00</div>
+                        <div className='appointment-time'>-----</div>
+                        </div>
+                        </div>
+
+                         <div className='calendar-day'>
+                    <div className='day-header'>
+                        <span className='day-name'>Fri</span>
+                        <span className='day-date'>29</span>
+                    </div>
+                    <div className='day-appointments'>
+                        <div className='appointment-time'>-----</div>
+                        <div className='appointment-time'>14:00</div>
+                        <div className='appointment-time'>16:00</div>
+                        </div>
+                        </div>
+
+                         <div className='calendar-day'>
+                    <div className='day-header'>
+                        <span className='day-name'>Sat</span>
+                        <span className='day-date'>30</span>
+                    </div>
+                    <div className='day-appointments'>
+                        <div className='appointment-time grey-bg'>12:00</div>
+                        <div className='appointment-time'>14:00</div>
+                        <div className='appointment-time'>15:00</div>
+                        </div>
+                        </div>
+
+                         <div className='calendar-day'>
+                    <div className='day-header'>
+                        <span className='day-name'>Sun</span>
+                        <span className='day-date'>31</span>
+                    </div>
+                    <div className='day-appointments'>
+                        <div className='appointment-time grey-bg'>09:00</div>
+                        <div className='appointment-time'>10:00</div>
+                        <div className='appointment-time'>11:00</div>
+                        </div>
+                        </div>
+            
         </div>
         {/* appointment times */}
         <div className='calendar-appointments'>

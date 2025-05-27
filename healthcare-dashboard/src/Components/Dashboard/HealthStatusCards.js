@@ -4,6 +4,7 @@ import HealthData from '../../Data/HealthData'
 const HealthStatusCards = () => {
   return (
     <div className='health-status-cards'>
+        
         {HealthData.map((item)=>{
             const Icon=item.icon
             return(
