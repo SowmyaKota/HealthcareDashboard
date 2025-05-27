@@ -1,10 +1,10 @@
 import React from 'react'
 import AnatomySection from './AnatomySection'
 import HealthStatusCards from './HealthStatusCards'
-import { CalendarAppointments } from '../../Data/AppointmentsData'
 import CalendarView from './CalendarView'
 import UpcomingSchedule from './UpcomingSchedule'
 import ActivityFeed from './ActivityFeed'
+import { ArrowBigRight } from 'lucide-react'
 
 const DashboardMainContent = () => {
   return (
@@ -23,7 +23,14 @@ const DashboardMainContent = () => {
             {/* middle column */}
             <div className='middle-section'>
                 <HealthStatusCards/>
+                <div className='details-link'>
+                <span className='details-Text'>Details</span>
+                <span className='arrow'>
+                    <ArrowBigRight className='arrow'/>
+                </span>
             </div>
+            </div>
+            
 
             {/* Right column */}
             <div className='dashboard-column right-column'>

@@ -5,8 +5,9 @@ const Header = () => {
   return (
     <header className='header'>
         <div className='header-left'>
+            <div className='icon-logo'>
             <h1 className='logo'>Health<span>care.</span></h1>
-            <div className='search-container' style={{position: 'relative', width:'250px'}}>
+            </div><div className='search-container' style={{position: 'relative', width:'250px'}}>
                 <Search size={18} style={{
                     position: 'absolute',
                     left: '12px',
@@ -21,10 +22,11 @@ const Header = () => {
             </div>
         </div>
         <div className='header-right'>
-            <Bell size={20} className='header-icon'/>
-            <div className='user-profile'>
-                <User size={24} className='user-avatar'/>
-            </div>
+            <div className='icon-bell'>
+                <Bell size={20} className='header-icon'/>
+            </div><div className='user-profile'>
+                    <User size={24} className='user-avatar'/>
+                </div>
             <button className='add-button'>
                 <Plus size={20}/>
             </button>
