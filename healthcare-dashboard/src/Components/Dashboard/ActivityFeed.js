@@ -4,12 +4,12 @@ import { ActivityData } from '../../Data/ScheduleData'
 const ActivityFeed = () => {
     const chartBars=[
         { height: 40, color: '#4ecdc4'},
-        { height: 60, color: '#45b7d1'},
+        { height: 80, color: '#45b7d1'},
         { height: 30, color: '#96ceb4'},
-        { height: 80, color: '#feca57'},
-        { height: 50, color: '#ff9ff3'},
+        { height: 100, color: '#feca57'},
+        { height: 60, color: '#ff9ff3'},
         { height: 70, color: '#54a0ff'},
-        { height: 35, color: '#5f27cd'},
+        { height: 90, color: '#5f27cd'},
     ]
   return (
     <div className='activity-section'>

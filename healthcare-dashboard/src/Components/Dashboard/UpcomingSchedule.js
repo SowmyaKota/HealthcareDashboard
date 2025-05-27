@@ -9,7 +9,7 @@ const UpcomingSchedule = () => {
             {upcomingSchedule && upcomingSchedule.map((day)=>(
                 <div key={day.id} className='schedule-day'>
                     <h4>On {day.day}</h4>
-                    <div className='appointments-grid'>
+                    <div className='appointments-row'>
                         {day.appointments && day.appointments.map((appointment, aptIndex)=>{
                             const Icon=appointment.icon
                             return(

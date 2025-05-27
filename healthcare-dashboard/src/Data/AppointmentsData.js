@@ -21,3 +21,13 @@ export const appointments = [
 export const calendarAppointments={
     25: ['09:00', "12:00", "14:00", "16:00"]
 }
+
+export const activityData=[
+    {day: 'Mon', value: 85 },
+    {day: 'Tues', value: 45 },
+    {day: 'Wed', value: 90 },
+    {day: 'Thurs', value: 35 },
+    {day: 'Fri', value: 75 },
+    {day: 'Sat', value: 60 },
+    {day: 'Sun', value: 95 },
+]

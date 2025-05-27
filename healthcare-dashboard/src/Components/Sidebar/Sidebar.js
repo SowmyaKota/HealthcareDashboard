@@ -14,7 +14,7 @@ const Sidebar = () => {
                         <div key={item.id}
                         className={`nav-item ${item.active ? 'active' : ''}`}>
                             <Icon size={20}/>
-                            <span>{item.label}</span>
+                            <span>{item.name}</span>
                         </div>
                     )
                 })}
