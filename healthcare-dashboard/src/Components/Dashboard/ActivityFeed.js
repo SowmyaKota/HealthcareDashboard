@@ -76,9 +76,6 @@ const ActivityFeed = () => {
     <div className='activity-section'>
         <div className='activity-header'>
             <div className="activity-title-group">
-                <span className="activity-icon">
-                    <BarChart2 size={18}/>
-                </span>
             <h3 className='activityTitle'>Activity</h3> 
             </div><p className='appointment-text'>3 appointments on this week</p>
         </div>
@@ -87,7 +84,7 @@ const ActivityFeed = () => {
         <div className='activity-chart'>
             {chartData.map((data, index)=> (
                     <div key={index} className='chart-bar-container'>
-                        <div className='chart-bars-group'>
+                        <div className='chart-bar-group'>
                         {data.bars.map((bar, barIndex)=>(
                             <div key={barIndex}
                             className='chart-bar'
