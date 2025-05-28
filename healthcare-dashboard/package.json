@@ -3,11 +3,14 @@
   "version": "1.0.0",
   "description": "This project was bootstrapped with Create React App.",
   "main": "index.js",
+  "homepage": "https://SowmyaKota.github.io/HealthcareDashboard",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "keywords": [],
   "author": "",
@@ -17,6 +20,7 @@
     "@testing-library/jest-dom": "^6.6.3",
     "@testing-library/react": "^16.3.0",
     "@testing-library/user-event": "^14.6.1",
+    "gh-pages": "^6.3.0",
     "lucide-react": "^0.511.0",
     "phosphor-react": "^1.4.1",
     "react": "^19.1.0",
